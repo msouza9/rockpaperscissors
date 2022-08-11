@@ -47,12 +47,8 @@ function getPlayerChoice() {
 }
 
 function playRound(choiceC, choiceP) {
-
-    console.log(choiceC);
-    console.log(choiceP);
  
     if(choiceC === choiceP) {
-        console.log("Issa tie");
         return "tie";
     }
     else if(choiceP === "rock" && choiceC === "scissor" ||
@@ -65,28 +61,43 @@ function playRound(choiceC, choiceP) {
 }
 
 function game() {
+    let pWins = 0;
+    let cWins = 0;
+
     for (let i = 0; i < 5; i++) {
     const compChoice = getComputerChoice();
     const playerChoice = getPlayerChoice();
-    const pWins = 0;
-    const cWins = 0;
 
     const winner = playRound(compChoice,playerChoice);
-
-    console.log(winner);
     
     if (winner == "player") {
-        pWins = pWins++;
+        pWins = pWins + 1;
     }
     else if (winner == "computer") {
-        cWins = cWins++;
+        cWins = cWins + 1;
+    }
+    else if (winner == "tie") {
+        console.log("Issa tie!")
     }
     else {
         console.log("Something weird happened here");
     }
 
-    console.log("Player has " + pWins + " wins!");
+    console.log("Player has " + pWins + " wins.");
     console.log("Computer has " + cWins + " wins.");
 
+    }
+
+    if(pWins > cWins) {
+        alert("Player has won!");
+    }
+    else if(cWins > pWins) {
+        alert("Computer has won :(");
+    }
+    else if(cWins === pWins) {
+        alert("It is a tie!");
+    }
+    else {
+        alert("I don't quite understand what happened here!");
     }
 }
