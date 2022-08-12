@@ -31,20 +31,21 @@ function getPlayerChoice() {
     let input = prompt("Rock, Paper, or Scissors?");
     let lwrInput = input.toLowerCase();
 
-    if(lwrInput == "rock") {
-        return "rock";
+        if(lwrInput == "rock") {
+            return "rock";
+        }
+        else if(lwrInput == "paper") {
+            return "paper";
+        }
+        else if(lwrInput == "scissors") {
+            return "scissors";
+        }
+        else {
+            console.log("I don't understand! Please choose rock, paper, or scissors");
+            getPlayerChoice();
+        }
     }
-    else if(lwrInput == "paper") {
-        return "paper";
-    }
-    else if(lwrInput == "scissors") {
-        return "scissors";
-    }
-    else {
-        console.log("I don't understand your input");
-        return null;
-    }
-}
+
 
 function playRound(choiceC, choiceP) {
  
