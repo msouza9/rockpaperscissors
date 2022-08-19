@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissor!</title>
 </head>
-<body>
+<body> 
     <h1>Welcome to Rock, Paper, Scissors</h1>
-        <button id="choose">Choose player!</button>
-        <button id="comp">CPU pick</button>
-        <button id="play">Did you win?</button>
-
-
-        <script src="./scripts.js"></script>
-
+        <div id="container">
+            <div class="rock">
+                <button id="rock">Rock!</button>
+                <img src="https://image-cdn.essentiallysports.com/wp-content/uploads/The-Rock-Dwayne-Johnson-2.png?width=600" alt="DWAYNE THE ROCK JOHNSON" height="350">
+                <p id="pRock">Player</p>
+                <p id="cRock">Computer</p>
+            </div>
+            <div class="paper">
+                <button id="paper">Paper!</button>
+                <img src="https://img.freepik.com/premium-vector/cute-tissue-roll-superhero-character-is-flying-cute-design_152558-56731.jpg?w=2000" alt="Papel" height="350">
+                <p id="pPaper">Player</p>
+                <p id="cPaper">Computer</p>
+            </div>
+            <div class="scissor">
+                <button id="scissor">Scissors!</button>
+                <img src="https://52f4e29a8321344e30ae-0f55c9129972ac85d6b1f4e703468e6b.ssl.cf2.rackcdn.com/products/pictures/1664113.jpg" alt="Scissors" height="350">
+                <p id="pScissor">Player</p>
+                <p id="cScissor">Computer</p>
+            </div>
+        </div>
+        <div class= "scores">
+            <div class="pScore">
+                <h2>Player Score</h2>
+                <canvas id="playerScore" width="480" height="50"></canvas>
+            </div>
+            <div class="cScore">
+                <h2>Computer Score</h2>
+                <canvas id="compScore" width="480" height="50"></canvas>
+            </div>
+        </div>
+        <h3 id="cWon">Computer has won</h3>
+        <h3 id="pWon">Player has won!</h3>
+        <h3 id="tie">It was a tie! Go again</h3>
 </body>
+    <script src="./scripts.js"></script>
 </html>
